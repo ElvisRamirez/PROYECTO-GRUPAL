@@ -6,45 +6,65 @@
     <title>Rutina de Ejercicio</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <script src="shadowDomRutinas.js"></script>
+    <style>
+        .card {
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 <body>
-
-
-    
     <div class="container">
         <div class="row">
             <div class="col-6">
                 <h1>Rutina de Ejercicio de Lunes a Miércoles</h1>
 
-                <my-tag 
-                    text="Lunes: Cardio y Piernas" 
-                    image="https://via.placeholder.com/150"
-                    color="white" 
-                    background="blue" 
-                    edge="black" 
-                    radius="10"
-                    description="Realiza ejercicios de cardio y fortalecimiento de piernas">
-                </my-tag>
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        Lunes: Cardio y Piernas
+                    </div>
+                    <div class="card-body">
+                        <my-tag 
+                            text="Realiza ejercicios de cardio y fortalecimiento de piernas" 
+                            image="imagenes/pecho.jpg"
+                            color="white" 
+                            background="blue" 
+                            edge="black" 
+                            radius="10">
+                        </my-tag>
+                    </div>
+                </div>
 
-                <my-tag 
-                    text="Martes: Brazos y Espalda" 
-                    image="https://via.placeholder.com/150"
-                    color="white" 
-                    background="green" 
-                    edge="black" 
-                    radius="10"
-                    description="Trabaja los músculos de brazos y espalda con pesas y flexiones">
-                </my-tag>
+                <div class="card">
+                    <div class="card-header bg-success text-white">
+                        Martes: Brazos y Espalda
+                    </div>
+                    <div class="card-body">
+                        <my-tag 
+                            text="Trabaja los músculos de brazos y espalda con pesas y flexiones" 
+                            image="https://via.placeholder.com/150"
+                            color="white" 
+                            background="green" 
+                            edge="black" 
+                            radius="10">
+                        </my-tag>
+                    </div>
+                </div>
 
-                <my-tag 
-                    text="Miércoles: Abdominales y Estiramientos" 
-                    image="https://via.placeholder.com/150"
-                    color="white" 
-                    background="red" 
-                    edge="black" 
-                    radius="10"
-                    description="Realiza ejercicios de abdominales seguido de estiramientos para mejorar la flexibilidad">
-                </my-tag>
+                <div class="card">
+                    <div class="card-header bg-danger text-white">
+                        Miércoles: Abdominales y Estiramientos
+                    </div>
+                    <div class="card-body">
+                        <my-tag 
+                            text="Realiza ejercicios de abdominales seguido de estiramientos para mejorar la flexibilidad" 
+                            image="https://via.placeholder.com/150"
+                            color="white" 
+                            background="red" 
+                            edge="black" 
+                            radius="10">
+                        </my-tag>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
