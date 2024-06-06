@@ -5,7 +5,7 @@ class MyTag extends HTMLElement {
     }
 
     static get observedAttributes() {
-        return ['text', 'color', 'edge', 'radius', 'background', 'image', 'description'];
+        return ['text', 'edge', 'radius', 'image', 'subtitle', 'description1', 'description2', 'description3'];
     }
 
     connectedCallback() {
@@ -26,13 +26,27 @@ class MyTag extends HTMLElement {
     template() {
         const text = this.getAttribute('text') || '';
         const image = this.getAttribute('image') || '';
-        const description = this.getAttribute('description') || '';
+        const subtitle = this.getAttribute('subtitle') || '';
+        const descriptions = [];
+
+        // Recoger todas las descripciones que comienzan con 'description'
+        for (let i = 1; i <= 3; i++) {
+            const description = this.getAttribute(`description${i}`);
+            if (description) {
+                descriptions.push(description);
+            }
+        }
+
+        const descriptionsHTML = descriptions.map(description => `<p>${description}</p>`).join('');
 
         return `
             <div class="tag">
                 <div class="exercise-img">
                     <img src="${image}" alt="exercise image" class="img-fluid" data-toggle="modal" data-target="#exerciseModal" />
-                    <div class="exercise-description">${description}</div>
+                    <div class="exercise-description">
+                        <h2>${subtitle}</h2>
+                        ${descriptionsHTML}
+                    </div>
                 </div>
                 <p>${text}</p>
             </div>
@@ -40,18 +54,14 @@ class MyTag extends HTMLElement {
     }
 
     templateCss() {
-        const color = this.getAttribute('color') || 'inherit';
         const edge = this.getAttribute('edge') || 'none';
         const radius = this.getAttribute('radius') || '0';
-        const background = this.getAttribute('background') || 'transparent';
 
         return `
             <style>
                 .tag {
-                    color: ${color};
                     border: 2px solid ${edge};
                     border-radius: ${radius}px;
-                    background-color: ${background};
                     padding: 10px;
                     display: inline-block;
                     font-family: Arial, sans-serif;
@@ -80,6 +90,10 @@ class MyTag extends HTMLElement {
                 }
                 img:hover {
                     transform: scale(1.1);
+                }
+                h2 {
+                    margin: 0;
+                    font-size: 1.2em;
                 }
                 p {
                     margin: 10px 0 0 0;
