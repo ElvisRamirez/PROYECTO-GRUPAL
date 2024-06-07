@@ -1,17 +1,130 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FitBuddy - Tu compañero de fitness</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="estilo.css">
+    <title>THE GYM</title>
+
 </head>
+
 <body>
-    <super-tag nav-background-color="lightblue" nav-color="white"
-        nav-items="Inicio, Rutinas, Actividad, Motivación-Gym Musi, Perfil"
-        carousel-images="img/ejercicio.jpg, img/gym.jpg, img/comida.jpg"
-        carousel-interval="3000">
-    </super-tag>
-    <script src="EsModules.js" type="module"></script>
-    <script src="index.js" type="module"></script>
+    <!-- MENU -->
+    <super-nav data-nav-items="Inicio, Perfil, Servicios, Rutina"
+        data-nav-links="inicio.html, perfil.html, servicio.html, rutina.html"
+        data-redes-items="facebook|https://facebook.com, twitter|https://twitter.com, instagram|https://instagram.com, whatsapp|https://whatsapp.com, youtube|https://youtube.com"
+        data-text-the="ENTRENA" data-text-gym="SEGURO">
+    </super-nav>
+
+    <!-- SECCION INICIO -->
+    <super-header data-title="HAZ QUE" data-highlight="OCURRA"
+        data-description="Triunfar es más fácil de lo que piensas!"
+        data-options="FITNESS,CROSSFIT,BOXING,ENDURANCE,YOGA,CARDIO,PIERNAS"></super-header>
+
+    <!-- SECCION NOSOTROS -->
+    <template id="nosotros-template">
+        <section class="nosotros">
+            <div class="fila">
+                <div class="col">
+                    <img src="" alt="">
+                </div>
+                <div class="col">
+                    <div class="contenedor-titulo">
+                        <div class="numero"></div>
+                        <div class="info">
+                            <span class="frase"></span>
+                            <h2></h2>
+                        </div>
+                    </div>
+                    <p class="p-especial"></p>
+                    <p></p>
+                </div>
+            </div>
+            <hr>
+            <div class="fila-nosotros">
+                <div class="col1">
+                    <span class="frase"></span>
+                    <h2></h2>
+                </div>
+                <div class="col2">
+                    <slot name="button"></slot>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <nosotros-section data-img="img/nosotros.png" data-num-text="01" data-experience-text="LA MEJOR EXPERIENCIA CON"
+        data-title-text="NOSOTROS" data-special-text="Desafía tus límites y alcanza tu mejor versión."
+        data-normal-text="Somos ENTRENA SEGURO, una comunidad comprometida con tu transformación física y mental. Únete a nosotros y descubre el poder de tu potencial."
+        data-train-different-text="ENTRENA DIFERENTE" data-train-free-text="ENTRENA GRATIS HOY!">
+        <pase-libre-button slot="button" data-text="PASE LIBRE"></pase-libre-button>
+    </nosotros-section>
+
+    <!-- SECCION GALERIA -->
+    <template id="galeria-template">
+        <section class="galeria">
+            <div class="contenido-seccion">
+                <div class="contenedor-titulo">
+                    <div class="numero"></div>
+                    <div class="info">
+                        <span class="frase"></span>
+                        <h2></h2>
+                    </div>
+                </div>
+                <div class="galeria-container">
+                    <div class="fila">
+                        <div class="col"></div>
+                        <div class="col"></div>
+                        <div class="col"></div>
+                    </div>
+                    <div class="fila">
+                        <div class="col"></div>
+                        <div class="col"></div>
+                        <div class="col"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <galeria-section data-num-text="02" data-experience-text="LA MEJOR EXPERIENCIA" data-title-text="GALERIA">
+        <img src="img/f1.jpg" alt="">
+        <img src="img/f2.jpg" alt="">
+        <img src="img/f3.jpg" alt="">
+        <img src="img/f4.jpg" alt="">
+        <img src="img/f5.jpg" alt="">
+        <img src="img/f6.jpg" alt="">
+    </galeria-section>
+
+    <!-- SECCION EQUIPO -->
+    <super-equipo data-titulo="LA MEJOR EXPERIENCIA" data-numero="03" data-miembros="ELVIS,img/equipo/elvis.png,Fitness - Pilates - Yoga
+            ;Wilo,img/equipo/wilo.png,Desarrollador - Frontend - Backend 
+            ;Oswaldo,img/equipo/baldo.png,Desarrollador - Frontend - Backend" data-redes="https://facebook.com/elvis,https://twitter.com/elvis,https://whatsapp.com/elvis
+            ;https://facebook.com/wilo,https://twitter.com/wilo,https://whatsapp.com/wilo
+            ;https://facebook.com/Oswaldo,https://twitter.com/Oswaldo,https://whatsapp.com/Oswaldo">
+    </super-equipo>
+
+    <!-- SECCION CONTACTO -->
+    <super-contacto data-titulo="LA MEJOR EXPERIENCIA" data-numero="04" data-direccion="Km 23 Vía Quevedo"
+        data-telefono="593 - 999999999" data-horario="Lunes a Sábado, 8:00h - 24:00h">
+    </super-contacto>
+
+    <!-- SECCION FOOTER -->
+    <super-footer 
+        data-year="2023" 
+        data-company="ENTRENA SEGURO" 
+        data-redes="facebook|https://facebook.com, twitter|https://twitter.com, instagram|https://instagram.com, youtube|https://youtube.com">
+    </super-footer>
+
+    <script src="js/app.js" type="module"> </script> <script src="js/menu.js"></script>
+    <script src="js/seccion.js"></script> <script src="js/nosotros.js"></script>
+    <script src="js/galeria.js"></script> <script src="js/equipo.js"></script>
+    <script src="js/contactos.js"></script> <script src="js/footer.js"></script>
 </body>
+
 </html>
