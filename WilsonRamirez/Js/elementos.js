@@ -68,11 +68,12 @@ class Fondo extends HTMLElement {
           .seccion {
             background-image: url("${ruta}");
             position: relative;
-            padding-top: 100px;
-            padding-bottom: 120px;
-            
-            background-size: cover;
-            
+            padding: 100px 20px; /* Padding ajustado */
+            display: flex;
+            flex-direction: row;
+            gap: 20px; /* Espacio entre los elementos */
+            justify-content: center; /* Centra los elementos horizontalmente */
+  align-items: center; /* Centra los elementos verticalmente */
           }
         </style>
         <section class="seccion">
@@ -83,3 +84,22 @@ class Fondo extends HTMLElement {
 }
 
 window.customElements.define("super-seccion", Fondo);
+
+class Carrusel extends HTMLElement {
+  constructor() {
+    super();
+    this.shadowDOM = this.attachShadow({ mode: "open" });
+  }
+
+  connectedCallback() {
+    this.render();
+  }
+
+  render() {
+    const template = document.getElementById("accordion-template");
+    const clone = document.importNode(template.content, true);
+    this.shadowDOM.appendChild(clone);
+  }
+}
+
+window.customElements.define("super-acordeon", Carrusel);

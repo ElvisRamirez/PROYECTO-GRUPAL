@@ -9,6 +9,13 @@ html {
   scroll-behavior: smooth;
 }
 
+.caja{
+  width: 800px;
+  height: 400px;
+  padding-left: 40px;
+  
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -76,6 +83,7 @@ body {
 
 .contenedor-header header .redes a:hover {
   color: #ff1133;
+  
 }
 
 .nav-responsive {
