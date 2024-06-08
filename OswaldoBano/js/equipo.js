@@ -27,7 +27,7 @@ class SuperEquipo extends HTMLElement {
             const [facebook, twitter, whatsapp] = redesArray[index].split(',');
             return `
                 <div class="col">
-                    <img src="${imagen}" alt="" width=95% height=50%>
+                    <img src="${imagen}" alt="" width=100% height=100%>
                     <div class="info">
                         <h2>${nombre}</h2>
                         <p>${descripcion}</p>
