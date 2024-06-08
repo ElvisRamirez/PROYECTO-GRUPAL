@@ -1,85 +1,122 @@
-/* styles.css */
-
-/* Estilos generales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Barlow';
+}
+html {
+  scroll-behavior: smooth;
+}
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
+  background-color: #dde1e9;
 }
 
-header {
-  background-color: #333;
+.contenedor-header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  border-bottom: 1px solid #1f283e;
+  background-color: rgba(0, 0, 0, .7);
+  z-index: 99;
+  padding: 0 20px;
+  transition: top 0.3s ease;
+}
+.contenedor-header.hidden {
+  top: -100%;
+}
+.contenedor-header header {
+  max-width: 1100px;
+  margin: auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
   color: #fff;
-  padding: 10px;
-  display: flex; /* Nuevo estilo para el encabezado */
-  align-items: center; /* Nuevo estilo para el encabezado */
 }
-
-h1, h2, h3 {
-  margin: 0;
-  padding: 0;
+.txtRojo {
+  color: #ff1133;
 }
-
-nav ul {
-  list-style: none;
-  padding: 0;
-}
-
-nav ul li {
-  display: inline;
-  margin-right: 10px;
-}
-
-nav ul li a {
-  color: #fff;
+.contenedor-header header nav a {
+  display: inline-block;
   text-decoration: none;
-}
-
-section#profile-section {
-  padding: 20px;
-}
-
-.profile-container {
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-ul {
-  padding-left: 20px;
-}
-
-/* Estilos específicos del perfil */
-h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-p {
-  margin-bottom: 10px;
-}
-
-h3 {
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-
-a {
-  color: #333;
-}
-
-footer {
-  background-color: #333;
   color: #fff;
-  padding: 10px;
-  text-align: center;
+  padding: 5px;
+  text-transform: uppercase;
+}
+.contenedor-header header nav a:hover {
+  color: #ff1133;
+}
+.contenedor-header header .redes a {
+  text-decoration: none;
+  color: #fff;
+  display: inline-block;
+  padding: 5px 8px;
+}
+.contenedor-header header .redes a:hover {
+  color: #ff1133;
+}
+.nav-responsive {
+  display: none;
+  font-size: 25px;
 }
 
-/* Nuevo estilo para el h1 */
-h1 {
-  margin-right: auto;
+footer{
+  background-color: #151623;
+  padding: 30px 0;
+}
+footer .info{
+  display: flex;
+  max-width: 1100px;
+  margin: auto;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+footer .info p{
+  color: #797e8e;
+}
+footer .info a{
+  text-decoration: none;
+  color: #797e8e;
+  display: inline-block;
+  margin: 0 15px;
+}
+
+@media only screen and (max-width: 900px) {
+  header nav {
+    position: initial;
+    display: none;
+    transform: translate(0);
+  }
+  header .redes {
+    display: none;
+  }
+  .nav-responsive {
+    display: block;
+  }
+  nav.responsive {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #151623;
+    z-index: 99;
+  }
+  nav.responsive a {
+    display: block;
+    width: fit-content;
+    margin: 10px auto;
+    font-size: 30px;
+  }
+  footer .info {
+    display: block;
+    text-align: center;
+  }
+  footer .info p {
+    margin-bottom: 10px;
+  }
 }
