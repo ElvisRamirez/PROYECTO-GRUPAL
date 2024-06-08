@@ -85,21 +85,4 @@ class Fondo extends HTMLElement {
 
 window.customElements.define("super-seccion", Fondo);
 
-class Carrusel extends HTMLElement {
-  constructor() {
-    super();
-    this.shadowDOM = this.attachShadow({ mode: "open" });
-  }
 
-  connectedCallback() {
-    this.render();
-  }
-
-  render() {
-    const template = document.getElementById("accordion-template");
-    const clone = document.importNode(template.content, true);
-    this.shadowDOM.appendChild(clone);
-  }
-}
-
-window.customElements.define("super-acordeon", Carrusel);
