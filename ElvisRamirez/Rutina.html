@@ -6,33 +6,55 @@
     <title>Rutina de Ejercicio</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <script src="shadowDomRutinas.js"></script>
+    <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col-6">
-                <div class="card">
-                    <h1 class="card-header bg-primary text-white">Lunes: Cardio y Piernas</h1>
-                    <div class="card-body">
-                        <my-tag 
-                            text="Realiza ejercicios de cardio y fortalecimiento de piernas" 
-                            image="https://via.placeholder.com/150"
-                            edge="black" 
-                            radius="10"
-                            subtitle="Descripción para el lunes"
-                            descriptions='["Descripción 1 para el lunes", "Descripción 2 para el lunes", "Descripción 3 para el lunes"]'>
-                        </my-tag>
-                    </div>
-                </div>
 
-                <!-- Repite para Martes y Miércoles -->
+    <super-nav
+        data-nav-items="Inicio, Perfil, Servicios, Rutina"
+        data-nav-links="../OswaldoBano/index.html, ../WilsonRamirez/perfil.html, ../NicoleDiaz/servicios.html, ../ElvisRamirez/Rutina.html"
+        data-redes-items="facebook|https://facebook.com, twitter|https://twitter.com, instagram|https://instagram.com, whatsapp|https://whatsapp.com, youtube|https://youtube.com"
+        data-text-the="ENTRENA"
+        data-text-gym="SEGURO">
+    </super-nav>
+
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <div class="card">
+                        <h1 class="card-header bg-primary text-white">Lunes: Cardio y Piernas</h1>
+                        <div class="card-body">
+                            <my-tag 
+                                text="Realiza ejercicios de cardio y fortalecimiento de piernas" 
+                                image="https://via.placeholder.com/150"
+                                edge="black" 
+                                radius="10"
+                                subtitle="Descripción para el lunes"
+                                descriptions='["Descripción 1 para el lunes", "Descripción 2 para el lunes", "Descripción 3 para el lunes"]'>
+                            </my-tag>
+                        </div>
+                    </div>
+    
+                    <!-- Repite para Martes y Miércoles -->
+                </div>
             </div>
         </div>
-    </div>
+    </main>
+
+   
+
+    <super-footer
+        data-year="2023"
+        data-company="ENTRENA SEGURO"
+        data-redes="facebook|https://facebook.com, twitter|https://twitter.com, instagram|https://instagram.com, youtube|https://youtube.com">
+    </super-footer>
 
     <!-- Bootstrap JavaScript -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/footer.js"></script>
 </body>
 </html>
