@@ -4,11 +4,21 @@
   box-sizing: border-box;
   font-family: 'Barlow';
 }
+
 html {
   scroll-behavior: smooth;
 }
+
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   background-color: #dde1e9;
+}
+
+main {
+  flex: 1;
+  padding-top: 80px; /* Ajusta este valor según la altura del header */
 }
 
 .contenedor-header {
@@ -21,9 +31,11 @@ body {
   padding: 0 20px;
   transition: top 0.3s ease;
 }
+
 .contenedor-header.hidden {
   top: -100%;
 }
+
 .contenedor-header header {
   max-width: 1100px;
   margin: auto;
@@ -34,9 +46,11 @@ body {
   padding: 20px 0;
   color: #fff;
 }
+
 .txtRojo {
   color: #ff1133;
 }
+
 .contenedor-header header nav a {
   display: inline-block;
   text-decoration: none;
@@ -44,38 +58,45 @@ body {
   padding: 5px;
   text-transform: uppercase;
 }
+
 .contenedor-header header nav a:hover {
   color: #ff1133;
 }
+
 .contenedor-header header .redes a {
   text-decoration: none;
   color: #fff;
   display: inline-block;
   padding: 5px 8px;
 }
+
 .contenedor-header header .redes a:hover {
   color: #ff1133;
 }
+
 .nav-responsive {
   display: none;
   font-size: 25px;
 }
 
-footer{
+footer {
   background-color: #151623;
   padding: 30px 0;
 }
-footer .info{
+
+footer .info {
   display: flex;
   max-width: 1100px;
   margin: auto;
   justify-content: space-between;
   padding: 0 20px;
 }
-footer .info p{
+
+footer .info p {
   color: #797e8e;
 }
-footer .info a{
+
+footer .info a {
   text-decoration: none;
   color: #797e8e;
   display: inline-block;
@@ -88,12 +109,15 @@ footer .info a{
     display: none;
     transform: translate(0);
   }
+  
   header .redes {
     display: none;
   }
+  
   .nav-responsive {
     display: block;
   }
+  
   nav.responsive {
     display: flex;
     flex-direction: column;
@@ -106,16 +130,19 @@ footer .info a{
     background-color: #151623;
     z-index: 99;
   }
+  
   nav.responsive a {
     display: block;
     width: fit-content;
     margin: 10px auto;
     font-size: 30px;
   }
+  
   footer .info {
     display: block;
     text-align: center;
   }
+  
   footer .info p {
     margin-bottom: 10px;
   }
