@@ -23,17 +23,17 @@ const instalaciones = [
         descripcion: "Máquinas de última generación para un entrenamiento eficiente.",
         imagenes: [
             "../img/07.jpg",
-            "/NicoleDiaz/img/01.jpg",
-            "/NicoleDiaz/img/01.jpg"
+            "../img/08.jpg",
+            "../img/09.jpg"
         ]
     },
     {
         titulo: "Spa",
         descripcion: "Relájate después de tu entrenamiento en nuestro lujoso spa.",
         imagenes: [
-            "/NicoleDiaz/img/01.jpg",
-            "/NicoleDiaz/img/01.jpg",
-            "/NicoleDiaz/img/01.jpg"
+            "../img/10.jpg",
+            "../img/11.jpg",
+            "../img/12.jpg"
         ]
     }
 ];
