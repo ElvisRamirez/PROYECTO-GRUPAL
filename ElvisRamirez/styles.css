@@ -1,12 +1,21 @@
-/* estilo.css */
-#zebra-image {
-    position: relative;
+#zebra-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Para colocarlo detrás de todo */
 }
 
-.zebra-strip {
-    overflow: hidden;
-    position: absolute;
-    top: 0;
-    background-size: cover;
-    background-position: center;
+.zebra-stripe {
+    width: 100%;
+    height: 30px; /* Altura de cada franja */
+}
+
+.black {
+    background-color: black;
+}
+
+.white {
+    background-color: white;
 }

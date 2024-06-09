@@ -19,27 +19,15 @@
         data-text-the="ENTRENA"
         data-text-gym="SEGURO">
     </super-nav>
-     <!-- Contenedor para la animación de la cebra -->
-     <div id="zebra-container"></div>
-
-     <!-- Importa el archivo JavaScript de animación -->
-     <script type="module" src="animation.js"></script>
-     <script>
-         import { showZebraStripes } from './animation.js';
- 
-         // Llama a la función para mostrar la animación de la cebra cuando el DOM esté listo
-         document.addEventListener('DOMContentLoaded', () => {
-             showZebraStripes();
-         });
-     </script>
+    
     <main>
         <div class="container">
             <div class="row justify-content-center">
                 <!-- Lunes -->
                 <div class="col-12 col-md-6">
                     <div class="card mb-4">
-                        <h1 class="card-header bg-primary text-white">Lunes: PECHO Y TRICEPS</h1>
-                        <div class="card-body">
+                        <h1 class="card-header bg-dark text-white">Lunes: PECHO Y TRICEPS</h1>
+                        <div class="card-body bg-light">
                             <my-tag 
                                 text="Descripción del ejercicio 1" 
                                 image="C:\xampp\htdocs\PROYECTO-GRUPAL\ElvisRamirez\imagenes\pecho1.jpg"
@@ -52,14 +40,14 @@
                             </my-tag>
                         </div>
                     </div>
-
+    
                     <div class="card mb-4">
-                        <h1 class="card-header bg-success text-white">Martes: PIERNA (CUADRICEPS )</h1>
-                        <div class="card-body">
+                        <h1 class="card-header bg-dark text-white">Martes: PIERNA (CUADRICEPS )</h1>
+                        <div class="card-body bg-light">
                             <my-tag 
                                 text="Descripción del ejercicio 2" 
                                 image="C:\xampp\htdocs\PROYECTO-GRUPAL\ElvisRamirez\imagenes\pierna.jpeg"
-                                edge="green" 
+                                edge="black" 
                                 radius="10"
                                 subtitle="Descripción para el martes"
                                 description1="Este entrenamiento se centra en el desarrollo y fortalecimiento de los músculos de los cuádriceps."
@@ -70,14 +58,14 @@
                         </div>
                     </div>
                     <div class="card mb-4">
-                        <h1 class="card-header bg-success text-white">Miércoles: ESPALDA Y BICEPS</h1>
-                        <div class="card-body">
+                        <h1 class="card-header bg-dark text-white">Miércoles: ESPALDA Y BICEPS</h1>
+                        <div class="card-body bg-light">
                             <my-tag 
                                 text="Descripción del ejercicio 3" 
                                 image="C:\xampp\htdocs\PROYECTO-GRUPAL\ElvisRamirez\imagenes\miercoles.jpg"
-                                edge="green" 
+                                edge="black" 
                                 radius="10"
-                                subtitle="Descripción para el miercoles"
+                                subtitle="Descripción para el miércoles"
                                 description1="Este día está dedicado al desarrollo de la espalda y los bíceps.
                                 Para trabajar la espalda, se recomienda realizar ejercicios como dominadas, remo con barra o mancuernas y jalones en polea."
                                 description2="Estos ejercicios ayudarán a fortalecer los músculos de la espalda, mejorando la postura y la estabilidad.
@@ -86,21 +74,15 @@
                             </my-tag>
                         </div>
                     </div>
-                    
-
-
                 </div>
-
-                
                 <div class="col-12 col-md-6">
-
                     <div class="card mb-4">
-                        <h1 class="card-header bg-success text-white">Jueves: PIERNA (GLUTEOS Y FEMORALES)</h1>
-                        <div class="card-body">
+                        <h1 class="card-header bg-dark text-white">Jueves: PIERNA (GLUTEOS Y FEMORALES)</h1>
+                        <div class="card-body bg-light">
                             <my-tag 
                                 text="Descripción del ejercicio 4" 
                                 image="C:\xampp\htdocs\PROYECTO-GRUPAL\ElvisRamirez\imagenes\jueves.jpg"
-                                edge="green" 
+                                edge="black" 
                                 radius="10"
                                 subtitle="Descripción para el jueves"
                                 description1="Este entrenamiento está diseñado para fortalecer y tonificar los músculos de los glúteos y los femorales.
@@ -111,12 +93,12 @@
                         </div>
                     </div>
                     <div class="card mb-4">
-                        <h1 class="card-header bg-success text-white">Viernes: PECHO Y HOMBROS</h1>
-                        <div class="card-body">
+                        <h1 class="card-header bg-dark text-white">Viernes: PECHO Y HOMBROS</h1>
+                        <div class="card-body bg-light">
                             <my-tag 
                                 text="Descripción del ejercicio 5" 
                                 image="C:\xampp\htdocs\PROYECTO-GRUPAL\ElvisRamirez\imagenes\Viernes.jpg"
-                                edge="green" 
+                                edge="black" 
                                 radius="10"
                                 subtitle="Descripción para el viernes"
                                 description1="Este entrenamiento se centra en el desarrollo de los músculos del pecho y los hombros
@@ -128,14 +110,14 @@
                         </div>
                     </div>
                     <div class="card mb-4">
-                        <h1 class="card-header bg-success text-white">Sábado: CARDIO Y ABS</h1>
-                        <div class="card-body">
+                        <h1 class="card-header bg-dark text-white">Sábado: CARDIO Y ABS</h1>
+                        <div class="card-body bg-light">
                             <my-tag 
                                 text="Descripción del ejercicio 6" 
                                 image="C:\xampp\htdocs\PROYECTO-GRUPAL\ElvisRamirez\imagenes\Sabado.jpg"
-                                edge="green" 
+                                edge="black" 
                                 radius="10"
-                                subtitle="Descripción para el sabado"
+                                subtitle="Descripción para el sábado"
                                 description1="Este entrenamiento se enfoca en mejorar tu resistencia cardiovascular y fortalecer los músculos abdominales.
                                 Puedes realizar actividades cardiovasculares como correr, saltar la cuerda o hacer ejercicios en bicicleta."
                                 description2="Para los abdominales, incluye ejercicios como crunches, planchas y bicicletas. Realiza de 3 a 4 series de 15 a 20 repeticiones por ejercicio."
@@ -143,22 +125,38 @@
                             </my-tag>
                         </div>
                     </div>
-                   
                 </div>
-            
-               
-            
-               
-                
             </div>
         </div>
     </main>
-
+    
     <super-footer
         data-year="2023"
         data-company="ENTRENA SEGURO"
         data-redes="facebook|https://facebook.com, twitter|https://twitter.com, instagram|https://instagram.com, youtube|https://youtube.com">
     </super-footer>
+    <template id="zebra-template">
+        <div id="zebra-container">
+            <!-- Las franjas de la cebra se agregarán aquí -->
+            <!-- Alternando franjas negras y blancas -->
+            <div class="zebra-stripe black"></div>
+            <div class="zebra-stripe white"></div>
+            <div class="zebra-stripe black"></div>
+            <div class="zebra-stripe white"></div>
+            <!-- Agrega más franjas si es necesario -->
+        </div>
+    </template>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Obtén el contenedor de la cebra del template
+            const template = document.getElementById('zebra-template');
+            const clone = document.importNode(template.content, true);
+            document.body.appendChild(clone);
+            
+            // Llama a la función para mostrar la animación de la cebra cuando el DOM esté listo
+            showZebraStripes();
+        });
+    </script>
     
     <!-- Bootstrap JavaScript -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
@@ -166,6 +164,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/footer.js"></script>
-  
+     <script src="animation.js"></script>
 </body>
 </html>
