@@ -1,0 +1,12 @@
+/* estilo.css */
+#zebra-image {
+    position: relative;
+}
+
+.zebra-strip {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    background-size: cover;
+    background-position: center;
+}

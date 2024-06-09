@@ -29,7 +29,6 @@ class MyTag extends HTMLElement {
         const subtitle = this.getAttribute('subtitle') || '';
         const descriptions = [];
 
-        // Recoger todas las descripciones que comienzan con 'description'
         for (let i = 1; i <= 3; i++) {
             const description = this.getAttribute(`description${i}`);
             if (description) {
@@ -43,10 +42,10 @@ class MyTag extends HTMLElement {
             <div class="tag">
                 <div class="exercise-img">
                     <img src="${image}" alt="exercise image" class="img-fluid" />
-                    <div class="exercise-description">
-                        <h2>${subtitle}</h2>
-                        ${descriptionsHTML}
-                    </div>
+                </div>
+                <div class="exercise-description">
+                    <h2>${subtitle}</h2>
+                    ${descriptionsHTML}
                 </div>
                 <p>${text}</p>
             </div>
@@ -67,28 +66,10 @@ class MyTag extends HTMLElement {
                     font-family: Arial, sans-serif;
                     text-align: center;
                     cursor: pointer;
-                    transition: transform 0.3s ease;
-                }
-                .tag:hover {
-                    transform: scale(1.05);
                 }
                 .exercise-img {
                     position: relative;
                     overflow: hidden;
-                    border-radius: ${radius}px;
-                }
-                .exercise-description {
-                    position: absolute;
-                    bottom: 0;
-                    left: 0;
-                    width: 100%;
-                    background-color: rgba(0, 0, 0, 0.5);
-                    color: white;
-                    padding: 10px;
-                    display: none;
-                }
-                .exercise-img:hover .exercise-description {
-                    display: block;
                 }
                 img {
                     max-width: 100%;
@@ -98,6 +79,9 @@ class MyTag extends HTMLElement {
                 }
                 img:hover {
                     transform: scale(1.1);
+                }
+                .exercise-description {
+                    margin-top: 10px;
                 }
                 h2 {
                     margin: 0;
