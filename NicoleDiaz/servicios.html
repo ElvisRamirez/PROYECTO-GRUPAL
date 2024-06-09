@@ -31,7 +31,23 @@
             <div class="contenido-seccion">
                 <h2>Eventos y Actividades</h2>
                 <p>Descubre nuestros emocionantes eventos y actividades grupales que te mantendrán motivado y en forma.</p>
-                <eventos-carrusel></eventos-carrusel>
+                
+                <div id="eventos-carrusel">
+                </div>
+
+                <template id="evento-template">
+                    <div class="evento">
+                        <img src="" alt="Evento">
+                        <div class="evento-texto"></div>
+                    </div>
+                </template>
+
+                <template id="dot-template">
+                    <div class="carrusel-dot"></div>
+                </template>
+
+                <div class="carrusel-nav">
+                </div>
             </div>
         </section>
 
@@ -65,6 +81,6 @@
     <script src="js/footer.js"></script>
     <script src="js/servicios.js"></script>
     <script type="module" src="js/main.js"></script>
-    <script type="module" src="js/eventos-carrusel.js"></script>
+    <script type="module" src="js/eventos.js"></script>
 </body>
 </html>
