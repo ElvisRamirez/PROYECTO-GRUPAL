@@ -86,3 +86,33 @@ class Fondo extends HTMLElement {
 window.customElements.define("super-seccion", Fondo);
 
 
+class Carousel extends HTMLElement {
+  constructor() {
+    super();
+    // Creamos un elemento div para contener el template
+    this.container = document.createElement('div');
+    this.container.style.width = '600px';
+    this.container.style.height = '400px';
+  }
+
+  connectedCallback() {
+    // Clonamos el template para cada instancia
+    const template = document.getElementById('carousel-template');
+    const content = template.content.cloneNode(true);
+    
+    // Modificamos las imágenes en el contenido clonado
+    const carouselItems = content.querySelectorAll('.carousel-item img');
+    carouselItems[0].src = this.getAttribute('image1') || '';
+    carouselItems[1].src = this.getAttribute('image2') || '';
+    carouselItems[2].src = this.getAttribute('image3') || '';
+    
+    // Agregamos el contenido modificado al contenedor
+    this.container.appendChild(content);
+    
+    // Agregamos el contenedor al DOM
+    this.appendChild(this.container);
+  }
+}
+
+customElements.define('super-carousel', Carousel);
+
