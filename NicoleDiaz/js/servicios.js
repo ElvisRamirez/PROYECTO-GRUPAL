@@ -50,7 +50,7 @@ class ServiciosImg extends HTMLElement {
                     height: 35%;
                     display: flex;
                     justify-content: center;
-                    transition: top 0.3s ease, bottom 0.3s ease;
+                    transition: top 0.7s ease, bottom 0.7s ease;
                 }
                 .additional-images img {
                     width: 100%;
