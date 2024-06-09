@@ -3,11 +3,11 @@ class EventosCarrusel extends HTMLElement {
         super();
         this.attachShadow({ mode: 'open' });
         this.eventos = [
-            { imagen: 'ruta/a/evento1.jpg', texto: 'Maratón Benéfica: Corre por una causa.' },
-            { imagen: 'ruta/a/evento2.jpg', texto: 'Clase Magistral de Yoga: Encuentra tu equilibrio.' },
-            { imagen: 'ruta/a/evento3.jpg', texto: 'Reto de Fuerza: Supera tus límites.' },
-            { imagen: 'ruta/a/evento4.jpg', texto: 'Zumbathon: Baila hacia la salud.' },
-            { imagen: 'ruta/a/evento5.jpg', texto: 'Seminario de Nutrición: Come inteligente.' }
+            { imagen: '../img/20.jpg', texto: 'Maratón Benéfica: Corre por una causa.' },
+            { imagen: '../img/21.jpg', texto: 'Clase Magistral de Yoga: Encuentra tu equilibrio.' },
+            { imagen: '../img/22.jpg', texto: 'Reto de Fuerza: Supera tus límites.' },
+            { imagen: '../img/23.jpg', texto: 'Zumbathon: Baila hacia la salud.' },
+            { imagen: '../img/24.jpg', texto: 'Seminario de Nutrición: Come inteligente.' }
         ];
         this.currentIndex = 0;
         this.render();
