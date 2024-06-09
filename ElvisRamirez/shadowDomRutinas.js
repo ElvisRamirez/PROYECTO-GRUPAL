@@ -42,7 +42,7 @@ class MyTag extends HTMLElement {
         return `
             <div class="tag">
                 <div class="exercise-img">
-                    <img src="${image}" alt="exercise image" class="img-fluid" data-toggle="modal" data-target="#exerciseModal" />
+                    <img src="${image}" alt="exercise image" class="img-fluid" />
                     <div class="exercise-description">
                         <h2>${subtitle}</h2>
                         ${descriptionsHTML}
@@ -67,10 +67,15 @@ class MyTag extends HTMLElement {
                     font-family: Arial, sans-serif;
                     text-align: center;
                     cursor: pointer;
+                    transition: transform 0.3s ease;
+                }
+                .tag:hover {
+                    transform: scale(1.05);
                 }
                 .exercise-img {
                     position: relative;
                     overflow: hidden;
+                    border-radius: ${radius}px;
                 }
                 .exercise-description {
                     position: absolute;
@@ -79,8 +84,11 @@ class MyTag extends HTMLElement {
                     width: 100%;
                     background-color: rgba(0, 0, 0, 0.5);
                     color: white;
-                    padding: 5px;
+                    padding: 10px;
                     display: none;
+                }
+                .exercise-img:hover .exercise-description {
+                    display: block;
                 }
                 img {
                     max-width: 100%;
