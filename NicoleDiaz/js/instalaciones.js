@@ -4,36 +4,36 @@ const instalaciones = [
         titulo: "Área de Cardio",
         descripcion: "Encuentra las mejores máquinas para tu entrenamiento cardiovascular.",
         imagenes: [
-            "../img/01.jpg",
-            "../img/02.jpg",
-            "../img/03.jpg"
+            "../NicoleDiaz/img/01.jpg",
+            "../NicoleDiaz/img/02.jpg",
+            "../NicoleDiaz/img/03.jpg"
         ]
     },
     {
         titulo: "Zona de Pesas Libres",
         descripcion: "Una amplia selección de pesas libres para tu entrenamiento de fuerza.",
         imagenes: [
-            "../img/04.jpg",
-            "../img/05.jpg",
-            "../img/06.jpg"
+            "../NicoleDiaz/img/04.jpg",
+            "../NicoleDiaz/img/05.jpg",
+            "../NicoleDiaz/img/06.jpg"
         ]
     },
     {
         titulo: "Máquinas de Pesas",
         descripcion: "Máquinas de última generación para un entrenamiento eficiente.",
         imagenes: [
-            "../img/07.jpg",
-            "../img/08.jpg",
-            "../img/09.jpg"
+            "../NicoleDiaz/img/07.jpg",
+            "../NicoleDiaz/img/08.jpg",
+            "../NicoleDiaz/img/09.jpg"
         ]
     },
     {
         titulo: "Spa",
         descripcion: "Relájate después de tu entrenamiento en nuestro lujoso spa.",
         imagenes: [
-            "../img/10.jpg",
-            "../img/11.jpg",
-            "../img/12.jpg"
+            "../NicoleDiaz/img/10.jpg",
+            "../NicoleDiaz/img/11.jpg",
+            "../NicoleDiaz/img/12.jpg"
         ]
     }
 ];

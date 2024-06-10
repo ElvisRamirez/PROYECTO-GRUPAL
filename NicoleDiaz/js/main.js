@@ -1,5 +1,5 @@
-// Importar desde instalaciones.js
-import { crearSeccionInstalacion, instalaciones } from '../js/instalaciones';
+
+import { crearSeccionInstalacion, instalaciones } from '../js/instalaciones.js';
 console.log("Instalaciones importadas:", instalaciones);
 // Obtener el contenedor de instalaciones
 const contenedorInstalaciones = document.getElementById('instalaciones');

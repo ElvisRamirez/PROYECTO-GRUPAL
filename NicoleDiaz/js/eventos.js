@@ -1,10 +1,10 @@
 // Datos de los eventos
 const eventos = [
-    { imagen: '../img/20.jpg', texto: 'Maratón Benéfica: Corre por una causa.' },
-    { imagen: '../img/21.jpg', texto: 'Clase Magistral de Yoga: Encuentra tu equilibrio.' },
-    { imagen: '../img/22.jpg', texto: 'Reto de Fuerza: Supera tus límites.' },
-    { imagen: '../img/23.jpg', texto: 'Zumbathon: Baila hacia la salud.' },
-    { imagen: '../img/24.jpg', texto: 'Seminario de Nutrición: Come inteligente.' }
+    { imagen: '../NicoleDiaz/img/20.jpeg', texto: 'Maratón Benéfica: Corre por una causa.' },
+    { imagen: '../NicoleDiaz/img/21.jpg', texto: 'Clase Magistral de Yoga: Encuentra tu equilibrio.' },
+    { imagen: '../NicoleDiaz/img/22.jpg', texto: 'Reto de Fuerza: Supera tus límites.' },
+    { imagen: '../NicoleDiaz/img/23.jpg', texto: 'Zumbathon: Baila hacia la salud.' },
+    { imagen: '../NicoleDiaz/img/24.jpg', texto: 'Seminario de Nutrición: Come inteligente.' }
 ];
 
 // Función para crear un elemento a partir de un template
