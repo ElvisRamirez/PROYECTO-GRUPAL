@@ -11,8 +11,8 @@ class ServiciosImg extends HTMLElement {
                 :host {
                     display: block;
                     position: relative;
-                    width: 450px;
-                    height: 250px;
+                    width: 380px;
+                    height: 230px;
                     overflow: hidden;
                 }
                 .image-container {
