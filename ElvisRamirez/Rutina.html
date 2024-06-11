@@ -5,10 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rutina de Ejercicio</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
     <script src="shadowDomRutinas.js"></script>
     <link rel="stylesheet" href="estilo.css">
-    <link rel="stylesheet" href="styles.css">
-    
+    <link rel="stylesheet" href="styles1.css">
+    <style>
+       body {
+    height: 2000px; /* Solo para permitir el scroll */
+}
+
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.4s, transform 0.4s;
+    z-index: 1000;
+}
+
+#scrollToTopBtn.show {
+    display: block;
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+#scrollToTopBtn.hide {
+    opacity: 0;
+    transform: translateX(-50%) translateY(20px);
+}
+  
+    </style>
 </head>
 <body>
 
@@ -19,7 +56,24 @@
         data-text-the="ENTRENA"
         data-text-gym="SEGURO">
     </super-nav>
-    
+    <div class="floating-button" id="playButton"></div>
+    <audio id="audio" src="/ElvisRamirez/musica.mp3"></audio>
+
+    <script type="module">
+        import { toggleAudio } from './audioPlayer.js';
+
+        const playButton = document.getElementById('playButton');
+        const audio = document.getElementById('audio');
+
+        playButton.addEventListener('mouseenter', () => {
+            playButton.classList.toggle('paused', !audio.paused);
+        });
+
+        playButton.addEventListener('click', () => {
+            toggleAudio();
+            playButton.classList.toggle('paused', !audio.paused);
+        });
+    </script>
     <main>
         <div class="container">
             <div class="row justify-content-center">
@@ -130,33 +184,34 @@
         </div>
     </main>
     
+
+    <scroll-to-top></scroll-to-top>
+
+    <template id="scrollToTopTemplate">
+        <button id="scrollToTopBtn">↑</button>
+    </template>
+<script src="scrollToTop.js"></script>
+<div id="chat-floating">
+    <button id="chat-toggle" class="btn btn-primary">Chat</button>
+    <div id="chat-content">
+        <div id="chat-messages"></div>
+        <form id="chat-form">
+            <div class="form-group">
+                <input type="text" id="chat-input" class="form-control" placeholder="Escribe tu mensaje...">
+            </div>
+            <button type="submit" class="btn btn-primary mt-2">Enviar</button>
+        </form>
+    </div>
+</div>
+
+
     <super-footer
         data-year="2023"
         data-company="ENTRENA SEGURO"
         data-redes="facebook|https://facebook.com, twitter|https://twitter.com, instagram|https://instagram.com, youtube|https://youtube.com">
     </super-footer>
-    <template id="zebra-template">
-        <div id="zebra-container">
-            <!-- Las franjas de la cebra se agregarán aquí -->
-            <!-- Alternando franjas negras y blancas -->
-            <div class="zebra-stripe black"></div>
-            <div class="zebra-stripe white"></div>
-            <div class="zebra-stripe black"></div>
-            <div class="zebra-stripe white"></div>
-            <!-- Agrega más franjas si es necesario -->
-        </div>
-    </template>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Obtén el contenedor de la cebra del template
-            const template = document.getElementById('zebra-template');
-            const clone = document.importNode(template.content, true);
-            document.body.appendChild(clone);
-            
-            // Llama a la función para mostrar la animación de la cebra cuando el DOM esté listo
-            showZebraStripes();
-        });
-    </script>
+   
+
     
     <!-- Bootstrap JavaScript -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
@@ -164,6 +219,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/footer.js"></script>
-     <script src="animation.js"></script>
+   
+   
+    
 </body>
 </html>
