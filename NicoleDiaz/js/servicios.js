@@ -8,6 +8,7 @@ class ServiciosImg extends HTMLElement {
         // Definimos el HTML inicial dentro del shadow DOM
         this.shadowRoot.innerHTML = `
             <style>
+            
                 :host {
                     display: block;
                     position: relative;
