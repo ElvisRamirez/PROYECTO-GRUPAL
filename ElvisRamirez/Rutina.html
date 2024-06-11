@@ -56,24 +56,9 @@
         data-text-the="ENTRENA"
         data-text-gym="SEGURO">
     </super-nav>
-    <div class="floating-button" id="playButton"></div>
-    <audio id="audio" src="/ElvisRamirez/musica.mp3"></audio>
+    <button class="floating-button" id="playButton">Play/Pause</button>
+    <audio id="audio" src="musica.mp3"></audio>
 
-    <script type="module">
-        import { toggleAudio } from './audioPlayer.js';
-
-        const playButton = document.getElementById('playButton');
-        const audio = document.getElementById('audio');
-
-        playButton.addEventListener('mouseenter', () => {
-            playButton.classList.toggle('paused', !audio.paused);
-        });
-
-        playButton.addEventListener('click', () => {
-            toggleAudio();
-            playButton.classList.toggle('paused', !audio.paused);
-        });
-    </script>
     <main>
         <div class="container">
             <div class="row justify-content-center">
@@ -219,6 +204,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/footer.js"></script>
+    <script type="module"></script>
+    <script type="module" src="main.js"></script>
    
    
     

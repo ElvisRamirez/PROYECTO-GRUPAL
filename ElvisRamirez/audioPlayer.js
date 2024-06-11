@@ -1,7 +1,6 @@
 // audioPlayer.js
-const audio = document.getElementById('audio');
-
 function toggleAudio() {
+    const audio = document.getElementById('audio');
     if (audio.paused) {
         audio.play();
     } else {
