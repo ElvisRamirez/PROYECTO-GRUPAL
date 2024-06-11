@@ -81,7 +81,7 @@ class Fondo extends HTMLElement {
         </section>
       `;
   }
-}
+}``
 
 window.customElements.define("super-seccion", Fondo);
 
