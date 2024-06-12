@@ -14,6 +14,7 @@
     <style>
        body {
     height: 2000px; /* Solo para permitir el scroll */
+    background: linear-gradient(to top, #070707, #872424);
 }
 
 #scrollToTopBtn {
@@ -84,8 +85,8 @@
                         <h1 class="card-header bg-dark text-white">Martes: PIERNA (CUADRICEPS )</h1>
                         <div class="card-body bg-light">
                             <my-tag 
-                                text="Descripción del ejercicio 2" 
-                                image="..\ElvisRamirez\imagenes\pierna.jpeg"
+                                timageext="Descripción del ejercicio 2" 
+                                ="..\ElvisRamirez\imagenes\pierna.jpeg"
                                 edge="black" 
                                 radius="10"
                                 subtitle="Descripción para el martes"
@@ -176,18 +177,7 @@
         <button id="scrollToTopBtn">↑</button>
     </template>
 <script src="scrollToTop.js"></script>
-<div id="chat-floating">
-    <button id="chat-toggle" class="btn btn-primary">Chat</button>
-    <div id="chat-content">
-        <div id="chat-messages"></div>
-        <form id="chat-form">
-            <div class="form-group">
-                <input type="text" id="chat-input" class="form-control" placeholder="Escribe tu mensaje...">
-            </div>
-            <button type="submit" class="btn btn-primary mt-2">Enviar</button>
-        </form>
-    </div>
-</div>
+
 
 
     <super-footer
