@@ -4,52 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rutina de Ejercicio</title>
+    <!-- Enlace a Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Enlace a Font Awesome para íconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
     integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
     crossorigin="anonymous" referrerpolicy="no-referrer">
+    <!-- Enlace al script de Shadow DOM para rutinas -->
     <script src="shadowDomRutinas.js"></script>
+    <!-- Enlace a hojas de estilo personalizadas -->
     <link rel="stylesheet" href="estilo.css">
     <link rel="stylesheet" href="styles1.css">
+    <!-- Estilos adicionales en línea -->
     <style>
-       body {
-    height: 2000px; /* Solo para permitir el scroll */
-    background: linear-gradient(to top, #070707, #872424);
-}
-
-#scrollToTopBtn {
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: none;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 50%;
-    font-size: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: opacity 0.4s, transform 0.4s;
-    z-index: 1000;
-}
-
-#scrollToTopBtn.show {
-    display: block;
-    opacity: 1;
-    transform: translateX(-50%) translateY(0);
-}
-
-#scrollToTopBtn.hide {
-    opacity: 0;
-    transform: translateX(-50%) translateY(20px);
-}
-  
+        body {
+            height: 2000px; /* Solo para permitir el scroll */
+            background: linear-gradient(to top, #160404, #160404);
+        }
     </style>
 </head>
 <body>
 
+    <!-- Componente personalizado para la navegación superior -->
     <super-nav
         data-nav-items="Inicio, Perfil, Servicios, Rutina"
         data-nav-links="../OswaldoBano/index.html, ../WilsonRamirez/perfil.html, ../NicoleDiaz/servicios.html, ../ElvisRamirez/Rutina.html"
@@ -57,7 +33,10 @@
         data-text-the="ENTRENA"
         data-text-gym="SEGURO">
     </super-nav>
+
+    <!-- Botón flotante para reproducir/pausar audio -->
     <button class="floating-button" id="playButton">Play/Pause</button>
+    <!-- Elemento de audio -->
     <audio id="audio" src="musica.mp3"></audio>
 
     <main>
@@ -68,6 +47,7 @@
                     <div class="card mb-4">
                         <h1 class="card-header bg-dark text-white">Lunes: PECHO Y TRICEPS</h1>
                         <div class="card-body bg-light">
+                            <!-- Componente personalizado my-tag con atributos dinámicos -->
                             <my-tag 
                                 text="Descripción del ejercicio 1" 
                                 image="..\ElvisRamirez\imagenes\pecho1.jpg"
@@ -80,23 +60,25 @@
                             </my-tag>
                         </div>
                     </div>
-    
+
+                    <!-- Martes -->
                     <div class="card mb-4">
                         <h1 class="card-header bg-dark text-white">Martes: PIERNA (CUADRICEPS )</h1>
                         <div class="card-body bg-light">
                             <my-tag 
-                                timageext="Descripción del ejercicio 2" 
+                                text="Descripción del ejercicio 2" 
                                 image="..\ElvisRamirez\imagenes\pierna.jpeg"
                                 edge="black" 
                                 radius="10"
                                 subtitle="Descripción para el martes"
                                 description1="Este entrenamiento se centra en el desarrollo y fortalecimiento de los músculos de los cuádriceps."
-                                description2="Se recomienda realizar ejercicios como sentadillas, extensiones de piernas y zancadas.
-                                Realiza de 3 a 4 series de 8 a 12 repeticiones por ejercicio. "
+                                description2="Se recomienda realizar ejercicios como sentadillas, extensiones de piernas y zancadas. Realiza de 3 a 4 series de 8 a 12 repeticiones por ejercicio."
                                 description3="Asegúrate de mantener una técnica adecuada y utilizar un peso desafiante pero manejable.">
                             </my-tag>
                         </div>
                     </div>
+
+                    <!-- Miércoles -->
                     <div class="card mb-4">
                         <h1 class="card-header bg-dark text-white">Miércoles: ESPALDA Y BICEPS</h1>
                         <div class="card-body bg-light">
@@ -106,16 +88,16 @@
                                 edge="black" 
                                 radius="10"
                                 subtitle="Descripción para el miércoles"
-                                description1="Este día está dedicado al desarrollo de la espalda y los bíceps.
-                                Para trabajar la espalda, se recomienda realizar ejercicios como dominadas, remo con barra o mancuernas y jalones en polea."
-                                description2="Estos ejercicios ayudarán a fortalecer los músculos de la espalda, mejorando la postura y la estabilidad.
-                                Para los bíceps, puedes incluir ejercicios como curls de bíceps con mancuernas o barra. "
+                                description1="Este día está dedicado al desarrollo de la espalda y los bíceps. Para trabajar la espalda, se recomienda realizar ejercicios como dominadas, remo con barra o mancuernas y jalones en polea."
+                                description2="Estos ejercicios ayudarán a fortalecer los músculos de la espalda, mejorando la postura y la estabilidad. Para los bíceps, puedes incluir ejercicios como curls de bíceps con mancuernas o barra."
                                 description3="Recuerda mantener una técnica adecuada y realizar de 3 a 4 series de 8 a 12 repeticiones por ejercicio para promover el crecimiento muscular.">
                             </my-tag>
                         </div>
                     </div>
                 </div>
+
                 <div class="col-12 col-md-6">
+                    <!-- Jueves -->
                     <div class="card mb-4">
                         <h1 class="card-header bg-dark text-white">Jueves: PIERNA (GLUTEOS Y FEMORALES)</h1>
                         <div class="card-body bg-light">
@@ -125,13 +107,14 @@
                                 edge="black" 
                                 radius="10"
                                 subtitle="Descripción para el jueves"
-                                description1="Este entrenamiento está diseñado para fortalecer y tonificar los músculos de los glúteos y los femorales.
-                                Puedes incluir ejercicios como sentadillas sumo, zancadas inversas, peso muerto rumano y extensiones de cadera."
-                                description2="Realiza de 3 a 4 series de 10 a 15 repeticiones por ejercicio. Asegúrate de mantener una buena técnica, enfocándote en la contracción de los músculos objetivo y evitando lesiones. "
+                                description1="Este entrenamiento está diseñado para fortalecer y tonificar los músculos de los glúteos y los femorales. Puedes incluir ejercicios como sentadillas sumo, zancadas inversas, peso muerto rumano y extensiones de cadera."
+                                description2="Realiza de 3 a 4 series de 10 a 15 repeticiones por ejercicio. Asegúrate de mantener una buena técnica, enfocándote en la contracción de los músculos objetivo y evitando lesiones."
                                 description3="Recuerda también calentar adecuadamente antes de iniciar el entrenamiento.">
                             </my-tag>
                         </div>
                     </div>
+
+                    <!-- Viernes -->
                     <div class="card mb-4">
                         <h1 class="card-header bg-dark text-white">Viernes: PECHO Y HOMBROS</h1>
                         <div class="card-body bg-light">
@@ -141,14 +124,14 @@
                                 edge="black" 
                                 radius="10"
                                 subtitle="Descripción para el viernes"
-                                description1="Este entrenamiento se centra en el desarrollo de los músculos del pecho y los hombros
-                                Para trabajar el pecho, puedes incluir ejercicios como press de banca y flexiones de pecho."
-                                description2="Estos ejercicios ayudarán a fortalecer los músculos pectorales y mejorar la definición.
-                                Para los hombros, puedes incorporar ejercicios como el press militar y las elevaciones laterales, que ayudarán a desarrollar los deltoides. "
+                                description1="Este entrenamiento se centra en el desarrollo de los músculos del pecho y los hombros. Para trabajar el pecho, puedes incluir ejercicios como press de banca y flexiones de pecho."
+                                description2="Estos ejercicios ayudarán a fortalecer los músculos pectorales y mejorar la definición. Para los hombros, puedes incorporar ejercicios como el press militar y las elevaciones laterales, que ayudarán a desarrollar los deltoides."
                                 description3="Recuerda mantener una técnica adecuada y realizar de 3 a 4 series de 8 a 12 repeticiones por ejercicio para promover el crecimiento muscular.">
                             </my-tag>
                         </div>
                     </div>
+
+                    <!-- Sábado -->
                     <div class="card mb-4">
                         <h1 class="card-header bg-dark text-white">Sábado: CARDIO Y ABS</h1>
                         <div class="card-body bg-light">
@@ -158,8 +141,7 @@
                                 edge="black" 
                                 radius="10"
                                 subtitle="Descripción para el sábado"
-                                description1="Este entrenamiento se enfoca en mejorar tu resistencia cardiovascular y fortalecer los músculos abdominales.
-                                Puedes realizar actividades cardiovasculares como correr, saltar la cuerda o hacer ejercicios en bicicleta."
+                                description1="Este entrenamiento se enfoca en mejorar tu resistencia cardiovascular y fortalecer los músculos abdominales. Puedes realizar actividades cardiovasculares como correr, saltar la cuerda o hacer ejercicios en bicicleta."
                                 description2="Para los abdominales, incluye ejercicios como crunches, planchas y bicicletas. Realiza de 3 a 4 series de 15 a 20 repeticiones por ejercicio."
                                 description3="Recuerda mantener una buena técnica y mantener el abdomen contraído durante los ejercicios de abdominales para maximizar su efectividad.">
                             </my-tag>
@@ -170,34 +152,31 @@
         </div>
     </main>
     
-
+    <!-- Componente personalizado para el botón de scroll-to-top -->
     <scroll-to-top></scroll-to-top>
 
+    <!-- Template para el botón de scroll-to-top -->
     <template id="scrollToTopTemplate">
         <button id="scrollToTopBtn">↑</button>
     </template>
-<script src="scrollToTop.js"></script>
+    <!-- Script para el componente scroll-to-top -->
+    <script src="scrollToTop.js"></script>
 
-
-
+    <!-- Componente personalizado para el pie de página -->
     <super-footer
         data-year="2024"
         data-company="ENTRENA SEGURO"
         data-redes="facebook|https://facebook.com, twitter|https://twitter.com, instagram|https://instagram.com, youtube|https://youtube.com">
     </super-footer>
-   
 
-    
-    <!-- Bootstrap JavaScript -->
+    <!-- Scripts de Bootstrap y otros scripts adicionales -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/footer.js"></script>
+    <!-- Script para módulos -->
     <script type="module"></script>
     <script type="module" src="main.js"></script>
-   
-   
-    
 </body>
 </html>
